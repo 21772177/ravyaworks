@@ -13,8 +13,8 @@ background:
 
 linear-gradient(
 180deg,
-#09111f 0%,
-#0f172a 35%,
+#0b1220 0%,
+#0f172a 40%,
 #111827 100%
 );
 
@@ -247,12 +247,7 @@ gap:30px;
 
 .card{
 
-background:
-
-linear-gradient(
-180deg,
-#18263d,
-#111827
+background:#18263d
 );
 
 padding:35px;
@@ -465,7 +460,9 @@ font-size:36px;
 
 section{
 
-padding:80px 22px;
+position:relative;
+
+z-index:2;
 
 }
 
