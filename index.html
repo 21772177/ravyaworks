@@ -1,299 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Ravya Works | AI • Web Development • Digital Solutions</title>
-
-<meta name="description" content="Ravya Works builds AI platforms, web applications and enterprise digital solutions.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravya Works | Modern Digital Solutions</title>
+    <!-- Import elegant fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-
-<nav>
-
-<a href="#home" class="logo">
-
-<img src="images/logo.png" alt="Ravya Works">
-
-</a>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#technology">Technology</a></li>
-
-<li><a href="#office">Office</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-
-<section id="home" class="hero">
-
-<div>
-
-<h1>
-
-Transforming Ideas Into
-
-<span>Intelligent Digital Experiences</span>
-
-</h1>
-
-<p>
-
-Building AI platforms, web applications, enterprise software and scalable technology solutions for future-ready businesses.
-
-</p>
-
-<a href="#contact" class="btn">
-
-Start Your Project
-
-</a>
-
-</div>
-
-<div>
-
-<img src="images/hero.jpg" alt="AI Platform">
-</div>
-
-</section>
-
-
-<section id="about">
-
-<h2>About Us</h2>
-
-<div class="grid2">
-
-<div>
-
-<img src="images/about.jpg" alt="About Ravya Works">
-</div>
-
-<div>
-
-<p>
-
-<b>Ravya Works</b> is a technology brand operated under <b>RunavyaAvyaraWorks Private Limited</b>.
-
-</p>
-
-<br>
-
-<p>
-
-We build AI systems, Web Development platforms, Digital Products and Enterprise Software solutions that are scalable, secure and future-ready.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="services">
-
-<h2>Services</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Artificial Intelligence</h3>
-
-<p>AI platforms, intelligent automation and smart business solutions.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Web Development</h3>
-
-<p>Modern responsive websites and business applications.</p>
-
-</div>
-
-<div class="card">
-
-<h3>IT Engineering</h3>
-
-<p>Enterprise systems and scalable architecture.</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="technology">
-
-<h2>Technology</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="images/ai.jpg" alt="Artificial Intelligence">
-<h3>AI Platforms</h3>
-
-</div>
-
-<div class="card">
-
-<img src="images/web.jpg" alt="Web Development">
-</div>
-
-<div class="card">
-
-<img src="images/it.jpg" alt="AI Engineering">
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="office">
-
-<h2>Corporate Office</h2>
-
-<div class="office">
-
-<div>
-
-<h3>RunavyaAvyaraWorks Private Limited</h3>
-
-<br>
-
-<p>
-
-#17, Aspire Coworks, 2nd Floor
-
-<br><br>
-
-7th Main Road II St
-
-<br><br>
-
-Indiranagar
-
-<br><br>
-
-Bangalore, Karnataka - 560038
-
-<br><br>
-
-India
-
-</p>
-
-</div>
-
-<div>
-
-<iframe
-
-src="https://maps.google.com/maps?q=Indiranagar%20Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed">
-
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="office">
-
-<div>
-
-<h3>Get In Touch</h3>
-
-<br>
-
-<p>Email : info@ravyaworks.com</p>
-
-</div>
-
-<div>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button class="btn">
-
-Send Message
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-© 2026 Ravya Works | RunavyaAvyaraWorks Private Limited
-
-</footer>
-
-
-<a
-
-href="https://wa.me/919503196964"
-
-class="whatsapp"
-
-target="_blank">
-
-WhatsApp
-
-</a>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="nav-container">
+            <a href="#home" class="logo">Ravya<span>Works</span></a>
+            
+            <!-- Hamburger Toggle (Checkbox Hack - No JS Required) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. HOME SECTION (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Building Scalable <span>Digital Solutions</span> for Modern Enterprises</h1>
+            <p>We design and engineer intelligent systems and custom technology solutions designed to improve business growth, efficiency, and user experience.</p>
+            <a href="#contact" class="btn">Let's Discuss Your Project</a>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT US SECTION -->
+    <section id="about">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <div class="flex-container" style="margin-bottom: 50px;">
+            <div class="flex-image">
+                <!-- Professional digital collaboration image -->
+                <img src="images/about.jpg" alt="Team Collaboration">
+            </div>
+            <div class="flex-text">
+                <p style="font-size: 18px; color: #F3F4F6; margin-bottom: 20px;">
+                    <strong>Ravya Works</strong> is a specialized technology brand operated under <strong>RunavyaAvyaraWorks Private Limited</strong>.
+                </p>
+                <p style="color: #9CA3AF; line-height: 1.8; margin-bottom: 20px;">
+                    We specialize in creating innovative digital platforms, intelligent systems, and custom technology solutions designed to improve efficiency, user experience, and business growth. Our approach combines modern technology, clean design, and scalable architecture to deliver reliable and future-ready solutions.
+                </p>
+                <p style="color: #9CA3AF; line-height: 1.8;">
+                    At Ravya Works, we believe in transforming ideas into impactful digital experiences through innovation, strategy, and technology-driven execution.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Core Values Grid inside About Section -->
+        <div class="grid">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To deliver robust digital platforms and intelligent solutions that empower companies to optimize workflows and achieve sustainable growth.</p>
+            </div>
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To be a trusted global partner for technological innovation, recognized for building reliable and highly scalable software architectures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services" style="background-color: #0F172A; max-width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 100px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Our <span>Services</span></h2>
+            <div class="grid">
+                <div class="card" style="background-color: #1E293B;">
+                    <h3 style="color: #3B82F6;">Digital Platforms</h3>
+                    <p>Custom-engineered web and mobile systems built with robust modern frameworks to ensure speed, stability, and clean user experience.</p>
+                </div>
+                <div class="card" style="background-color: #1E293B;">
+                    <h3 style="color: #3B82F6;">Intelligent Systems</h3>
+                    <p>Smart applications designed to automate business workflows, simplify operations, and provide data-driven insight for decision making.</p>
+                </div>
+                <div class="card" style="background-color: #1E293B;">
+                    <h3 style="color: #3B82F6;">Custom Enterprise Solutions</h3>
+                    <p>Tailored technology solutions designed from the ground up to align perfectly with your internal business requirements and processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT SECTION -->
+    <section id="contact">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+        <div class="contact-container">
+            
+            <!-- Contact details -->
+            <div class="contact-info">
+                <h3>Let's collaborate</h3>
+                <p>Have an idea or a project in mind? Reach out to us, and our team will get back to you to discuss how we can turn your vision into a scalable digital reality.</p>
+                
+                <div class="info-details">
+                    <div class="info-item">
+                        <strong>Parent Company:</strong> RunavyaAvyaraWorks Private Limited
+                    </div>
+                    <div class="info-item">
+                        <strong>Domain:</strong> ravyaworks.com
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong> <a href="mailto:info@ravyaworks.com">info@ravyaworks.com</a>
+                    </div>
+                    <div class="info-item">
+                        <strong>Contact:</strong> <a href="tel:+919503196964">9503196964</a> / <a href="tel:+917620607304">7620607304</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive form -->
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! (This is a preview)');">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help you?</label>
+                    <textarea id="message" rows="5" required placeholder="Describe your project or inquiry"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919503196964" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.528 2.017 14.077.99 11.493.99c-5.438 0-9.861 4.372-9.865 9.804-.001 1.73.473 3.424 1.378 4.92l-.943 3.445 3.584-.93zm11.366-6.666c-.312-.156-1.848-.91-2.137-1.014-.29-.104-.5-.156-.711.156-.211.312-.818 1.014-1.002 1.222-.185.208-.369.234-.682.078-.312-.156-1.318-.485-2.51-1.548-.928-.827-1.554-1.849-1.736-2.16-.182-.312-.02-.48.136-.636.141-.14.312-.364.469-.546.156-.182.208-.312.312-.52.104-.208.052-.39-.026-.546-.078-.156-.711-1.714-.975-2.348-.256-.618-.517-.534-.711-.544-.183-.009-.393-.01-.602-.01-.21 0-.553.078-.842.39-.29.312-1.107 1.082-1.107 2.636 0 1.554 1.133 3.056 1.29 3.264.156.208 2.23 3.402 5.4 4.764.754.324 1.343.518 1.802.663.757.24 1.446.207 1.99.125.607-.09 1.847-.754 2.11-1.482.264-.728.264-1.352.185-1.482-.078-.13-.29-.208-.602-.364z"/>
+        </svg>
+        WhatsApp
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ravya Works. A brand of RunavyaAvyaraWorks Private Limited. All rights reserved.</p>
+    </footer>
 
 </body>
-
 </html>
