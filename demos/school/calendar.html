@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Springfield High School</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for the calendar page, you might want to move these to style.css */
+        .calendar-embed {
+            margin: 40px 0;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .calendar-embed iframe {
+            width: 100%;
+            height: 600px;
+            border: 0;
+        }
+
+        .event-list {
+            margin-top: 50px;
+        }
+        .event-list h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .event-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .event-date-box {
+            background: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 80px;
+        }
+        .event-date-box .month {
+            display: block;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        .event-date-box .day {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .event-details h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .event-details p {
+            margin-bottom: 5px;
+        }
+        .event-details .time {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Springfield High School Logo">
+                <h1>Springfield High School</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="calendar.html" class="active">Calendar</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/calendar-banner.jpg');">
+        <div class="container">
+            <h2>School Calendar</h2>
+            <p>Never miss an important date or event!</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <p>Our dynamic school calendar keeps you informed about academic deadlines, athletic events, club meetings, holidays, and more. You can view the full calendar below or subscribe to our feeds.</p>
+
+            <div class="calendar-embed">
+                <!-- Replace with your actual Google Calendar embed code -->
+                <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <p style="text-align: center; margin-top: 15px;">Click <a href="#">here</a> to open the calendar in a new window or add to your Google Calendar.</p>
+            </div>
+
+            <div class="event-list">
+                <h3>Upcoming Events</h3>
+                <div class="event-item">
+                    <div class="event-date-box">
+                        <span class="month">Nov</span>
+                        <span class="day">05</span>
+                    </div>
+                    <div class="event-details">
+                        <h4>Parent-Teacher Conferences</h4>
+                        <p class="time">9:00 AM - 3:00 PM</p>
+                        <p>Opportunity for parents to meet with teachers to discuss student progress. Appointments required.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date-box">
+                        <span class="month">Nov</span>
+                        <span class="day">10</span>
+                    </div>
+                    <div class="event-details">
+                        <h4>Varsity Basketball Game vs. Northwood High</h4>
+                        <p class="time">7:00 PM - 9:00 PM @ SHS Gymnasium</p>
+                        <p>Come support our Knights as they take on their rivals!</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date-box">
+                        <span class="month">Nov</span>
+                        <span class="day">15</span>
+                    </div>
+                    <div class="event-details">
+                        <h4>Fall Drama Production: "A Midsummer Night's Dream"</h4>
+                        <p class="time">7:30 PM @ Auditorium</p>
+                        <p>Our talented drama club presents Shakespeare's classic comedy. Tickets available at the door.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date-box">
+                        <span class="month">Nov</span>
+                        <span class="day">22</span>
+                    </div>
+                    <div class="event-details">
+                        <h4>Early Dismissal for Thanksgiving Break</h4>
+                        <p class="time">12:00 PM</p>
+                        <p>School will dismiss early before the Thanksgiving holiday.</p>
+                    </div>
+                </div>
+                <!-- Add more events as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>&copy; 2023 Springfield High School. All rights reserved.</p>
+                <p>123 School Lane, Springfield, ST 12345</p>
+                <p>Phone: (123) 456-7890 | Email: info@springfieldhigh.edu</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                <a href="#"><img src src="images/icon-twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
