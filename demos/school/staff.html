@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Staff - Springfield High School</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for the staff page, you might want to move these to style.css */
+        .staff-categories {
+            margin-top: 40px;
+        }
+        .staff-categories h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .staff-member {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .staff-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .staff-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #3498db;
+        }
+
+        .staff-member h4 {
+            margin: 10px 0 5px 0;
+            color: #2c3e50;
+        }
+
+        .staff-member .role {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .staff-member .email {
+            font-size: 0.9em;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Springfield High School Logo">
+                <h1>Springfield High School</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="staff.html" class="active">Staff</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/staff-banner.jpg');">
+        <div class="container">
+            <h2>Our Dedicated Staff</h2>
+            <p>Meet the people who make Springfield High School exceptional.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <p>Our faculty and staff are the heart of Springfield High School. Dedicated, passionate, and highly qualified, they are committed to fostering a supportive and stimulating learning environment where every student can thrive.</p>
+
+            <div class="staff-categories">
+                <h3>Administration</h3>
+                <div class="staff-grid">
+                    <div class="staff-member">
+                        <img src="images/staff-principal.jpg" alt="Principal John Smith">
+                        <h4>Mr. John Smith</h4>
+                        <p class="role">Principal</p>
+                        <p class="email"><a href="mailto:jsmith@springfieldhigh.edu">jsmith@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-viceprincipal.jpg" alt="Vice Principal Jane Doe">
+                        <h4>Ms. Jane Doe</h4>
+                        <p class="role">Vice Principal</p>
+                        <p class="email"><a href="mailto:jdoe@springfieldhigh.edu">jdoe@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-admissions.jpg" alt="Admissions Director Emily White">
+                        <h4>Ms. Emily White</h4>
+                        <p class="role">Director of Admissions</p>
+                        <p class="email"><a href="mailto:ewhite@springfieldhigh.edu">ewhite@springfieldhigh.edu</a></p>
+                    </div>
+                </div>
+
+                <h3>Teaching Faculty</h3>
+                <div class="staff-grid">
+                    <div class="staff-member">
+                        <img src="images/staff-math.jpg" alt="Math Teacher Mr. David Green">
+                        <h4>Mr. David Green</h4>
+                        <p class="role">Mathematics Department Head</p>
+                        <p class="email"><a href="mailto:dgreen@springfieldhigh.edu">dgreen@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-english.jpg" alt="English Teacher Ms. Laura Brown">
+                        <h4>Ms. Laura Brown</h4>
+                        <p class="role">English Teacher, Senior Class Advisor</p>
+                        <p class="email"><a href="mailto:lbrown@springfieldhigh.edu">lbrown@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-science.jpg" alt="Science Teacher Dr. Alan Lee">
+                        <h4>Dr. Alan Lee</h4>
+                        <p class="role">Science Department, AP Biology</p>
+                        <p class="email"><a href="mailto:alee@springfieldhigh.edu">alee@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-history.jpg" alt="History Teacher Ms. Sarah Chen">
+                        <h4>Ms. Sarah Chen</h4>
+                        <p class="role">History Teacher, Student Government Advisor</p>
+                        <p class="email"><a href="mailto:schen@springfieldhigh.edu">schen@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-art.jpg" alt="Art Teacher Mr. Chris Taylor">
+                        <h4>Mr. Chris Taylor</h4>
+                        <p class="role">Art Department Head, Yearbook Advisor</p>
+                        <p class="email"><a href="mailto:ctaylor@springfieldhigh.edu">ctaylor@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-coach.jpg" alt="Athletic Director Coach Mike Johnson">
+                        <h4>Coach Mike Johnson</h4>
+                        <p class="role">Athletic Director, Head Football Coach</p>
+                        <p class="email"><a href="mailto:mjohnson@springfieldhigh.edu">mjohnson@springfieldhigh.edu</a></p>
+                    </div>
+                </div>
+
+                <h3>Support Staff</h3>
+                <div class="staff-grid">
+                    <div class="staff-member">
+                        <img src="images/staff-counselor.jpg" alt="Guidance Counselor Ms. Olivia Martinez">
+                        <h4>Ms. Olivia Martinez</h4>
+                        <p class="role">Lead Guidance Counselor</p>
+                        <p class="email"><a href="mailto:omartinez@springfieldhigh.edu">omartinez@springfieldhigh.edu</a></p>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/staff-librarian.jpg" alt="Librarian Mr. Kevin Wilson">
+                        <h4>Mr. Kevin Wilson</h4>
+                        <p class="role">School Librarian</p>
+                        <p class="email"><a href="mailto:kwilson@springfieldhigh.edu">kwilson@springfieldhigh.edu</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>&copy; 2023 Springfield High School. All rights reserved.</p>
+                <p>123 School Lane, Springfield, ST 12345</p>
+                <p>Phone: (123) 456-7890 | Email: info@springfieldhigh.edu</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
