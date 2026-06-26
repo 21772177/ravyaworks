@@ -564,68 +564,55 @@ p { color: var(--color-text-muted); }
 .about-media__badge span { font-size: 0.85rem; opacity: 0.9; }
   </style>
 
-  <!-- SEO (title/description/keywords/OG are also set dynamically by app.js
-       from config.js — these are static fallbacks for crawlers & previews) -->
-  <title>Spice Garden Restaurant | Authentic Indian Dining in Bangalore</title>
-  <meta name="description" content="Spice Garden Restaurant serves authentic North Indian, South Indian & Chinese cuisine in Indiranagar, Bangalore. Dine-in, takeaway & direct online ordering — skip the 30% app commission. Book your table today." />
-  <meta name="keywords" content="restaurant in Indiranagar, best restaurant Bangalore, Indian restaurant, North Indian food, South Indian food, Chinese restaurant, family dining Bangalore, online food order, table booking, Spice Garden" />
-  <meta name="author" content="Spice Garden Restaurant" />
+  <title>Ethnic Elegance Boutique | Designer Sarees & Ethnic Wear in Jayanagar</title>
+  <meta name="description" content="Ethnic Elegance Boutique in Jayanagar, Bangalore offers designer sarees, lehengas, salwar suits, bridal collection, kurtas & accessories. Handpicked designer pieces since 2008." />
+  <meta name="keywords" content="boutique in Jayanagar, designer sarees Bangalore, lehenga Bangalore, ethnic wear Jayanagar, bridal sarees, Ethnic Elegance Boutique" />
+  <meta name="author" content="Ethnic Elegance Boutique" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Spice Garden Restaurant | Authentic Indian Dining in Bangalore" />
-  <meta property="og:description" content="Authentic North Indian, South Indian & Chinese cuisine in Indiranagar, Bangalore. Dine-in, takeaway & direct online ordering." />
-  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Ethnic Elegance Boutique | Designer Sarees & Ethnic Wear in Jayanagar" />
+  <meta property="og:description" content="Designer sarees, lehengas, salwar suits, bridal collection & accessories in Jayanagar, Bangalore. Handpicked designer pieces since 2008." />
+  <meta property="og:type" content="Store" />
   <meta property="og:image" content="assets/hero.jpg" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Spice Garden Restaurant | Authentic Indian Dining in Bangalore" />
-  <meta name="twitter:description" content="Authentic North Indian, South Indian & Chinese cuisine in Indiranagar, Bangalore." />
+  <meta name="twitter:title" content="Ethnic Elegance Boutique | Designer Sarees in Jayanagar" />
+  <meta name="twitter:description" content="Designer sarees, lehengas & bridal collection in Jayanagar, Bangalore." />
   <meta name="twitter:image" content="assets/hero.jpg" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Framework styles -->
   <link rel="stylesheet" href="../_framework/css/base.css" />
   <link rel="stylesheet" href="../_framework/css/layout.css" />
   <link rel="stylesheet" href="../_framework/css/components.css" />
   <link rel="stylesheet" href="../_framework/css/theme.css" />
 
-  <!-- Schema.org structured data for local restaurant SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Spice Garden Restaurant",
-    "servesCuisine": ["Indian", "North Indian", "South Indian", "Chinese"],
-    "priceRange": "₹₹",
-    "telephone": "+91-8472971234",
+    "@type": "ClothingStore",
+    "name": "Ethnic Elegance Boutique",
+    "description": "Designer sarees, lehengas, salwar suits and bridal collection in Jayanagar, Bangalore.",
+    "telephone": "+91-8472971207",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "100 Feet Road, Indiranagar",
+      "streetAddress": "No. 32, 11th Main Road, Jayanagar 4th Block",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
-      "postalCode": "560038",
+      "postalCode": "560011",
       "addressCountry": "IN"
     },
-    "openingHours": "Mo-Su 11:00-23:00"
+    "openingHours": "Mo-Sa 10:30-20:30"
   }
   </script>
 </head>
-<body data-preset="restaurant">
+<body data-preset="boutique">
   <a class="skip-link" href="#home">Skip to content</a>
-
-  <!-- All sections are rendered here by the framework engine from config.js -->
   <div id="app"></div>
-
-  <!-- 1. Site config (content + theme — the ONLY file you edit per site) -->
   <script src="config.js"></script>
-  <!-- 2. Framework engine (renders everything — do NOT edit) -->
   <script src="../_framework/js/app.js"></script>
 </body>
 </html>

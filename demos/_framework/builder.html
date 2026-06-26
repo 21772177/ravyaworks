@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RavyaWorks Config Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--pri:#6366f1;--pri-d:#4f46e5;--bg:#f8fafc;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--radius:10px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.builder{max-width:900px;margin:0 auto;padding:24px 20px 80px}
+header{background:linear-gradient(135deg,var(--pri),var(--pri-d));color:#fff;padding:32px 24px;border-radius:var(--radius);margin-bottom:32px;text-align:center}
+header h1{font-family:'Poppins',sans-serif;font-size:1.8rem;margin-bottom:6px}
+header p{opacity:.85;font-size:.95rem}
+.sec{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:20px;overflow:hidden}
+.sec-head{padding:16px 20px;background:var(--bg);border-bottom:1px solid var(--border);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.sec-head h2{font-size:1rem;font-weight:700}
+.sec-head .ch{font-size:1.2rem;transition:transform .2s}
+.sec.open .ch{transform:rotate(180deg)}
+.sec-body{padding:20px;display:none}
+.sec.open .sec-body{display:block}
+label{display:block;font-weight:600;font-size:.85rem;margin-bottom:5px}
+.f{margin-bottom:16px}
+.f input,.f textarea,.f select{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:8px;font-size:.95rem;font-family:inherit;transition:border .2s}
+.f input:focus,.f textarea:focus,.f select:focus{outline:none;border-color:var(--pri)}
+.f textarea{resize:vertical;min-height:80px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.r3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.ht{font-size:.78rem;color:var(--muted);margin-top:3px}
+.cf{display:flex;align-items:center;gap:10px}
+.cf input[type="color"]{width:44px;height:44px;border:2px solid var(--border);border-radius:8px;cursor:pointer;padding:2px}
+.cf input[type="text"]{flex:1}
+.rep{border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px;background:#fafbfc}
+.rep-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.rep-h h4{font-size:.9rem;color:var(--muted)}
+.brm{background:#fee2e2;color:#dc2626;border:none;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:.8rem;font-weight:600}
+.brm:hover{background:#fecaca}
+.badd{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--pri);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9rem;margin-top:8px}
+.badd:hover{background:var(--pri-d)}
+.acts{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:14px 24px;display:flex;gap:12px;justify-content:center;z-index:100;box-shadow:0 -4px 20px rgba(0,0,0,.08);flex-wrap:wrap}
+.btn{padding:12px 28px;border:none;border-radius:8px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit}
+.bp{background:var(--pri);color:#fff}.bp:hover{background:var(--pri-d)}
+.bs{background:#e2e8f0;color:var(--text)}.bs:hover{background:#cbd5e1}
+.bgrn{background:#16a34a;color:#fff}.bgrn:hover{background:#15803d}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{padding:8px 16px;border:2px solid var(--border);border-radius:20px;cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s}
+.chip:hover,.chip.on{border-color:var(--pri);background:var(--pri);color:#fff}
+.toast{position:fixed;top:24px;right:24px;background:#16a34a;color:#fff;padding:14px 24px;border-radius:8px;font-weight:600;z-index:200;transform:translateX(120%);transition:transform .3s}
+.toast.show{transform:translateX(0)}
+@media(max-width:600px){.r2,.r3{grid-template-columns:1fr}.builder{padding:16px 12px 80px}}
+</style>
+</head>
+<body>
+<div class="builder">
+<header><h1>RavyaWorks Config Builder</h1><p>Fill in the fields. Download your config.js when done.</p></header>
+
+<div class="sec open"><div class="sec-head" onclick="tog(this)"><h2>Industry Preset</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body"><p style="margin-bottom:12px;font-size:.9rem;color:var(--muted)">Start with a pre-filled template:</p>
+<div class="chips" id="presets"></div></div></div>
+
+<div class="sec open"><div class="sec-head" onclick="tog(this)"><h2>Business Identity</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r2"><div class="f"><label>Business Name</label><input id="b_name" placeholder="Spice Garden Restaurant"/></div><div class="f"><label>Tagline</label><input id="b_tagline" placeholder="Authentic Indian Flavours"/></div></div>
+<div class="r2"><div class="f"><label>Industry</label><input id="b_industry" placeholder="Restaurant"/></div><div class="f"><label>Established</label><input id="b_est" placeholder="2009"/></div></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Theme & Colors</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r3"><div class="f"><label>Primary</label><div class="cf"><input type="color" id="c_primary" value="#c0392b"/><input type="text" id="c_primary_t" value="#c0392b"/></div></div>
+<div class="f"><label>Primary Dark</label><div class="cf"><input type="color" id="c_primaryDark" value="#962d22"/><input type="text" id="c_primaryDark_t" value="#962d22"/></div></div>
+<div class="f"><label>Primary Light</label><div class="cf"><input type="color" id="c_primaryLight" value="#e74c3c"/><input type="text" id="c_primaryLight_t" value="#e74c3c"/></div></div></div>
+<div class="r3"><div class="f"><label>Secondary</label><div class="cf"><input type="color" id="c_secondary" value="#2c3e50"/><input type="text" id="c_secondary_t" value="#2c3e50"/></div></div>
+<div class="f"><label>Accent</label><div class="cf"><input type="color" id="c_accent" value="#f39c12"/><input type="text" id="c_accent_t" value="#f39c12"/></div></div>
+<div class="f"><label>Surface Alt</label><div class="cf"><input type="color" id="c_surfaceAlt" value="#fff5f2"/><input type="text" id="c_surfaceAlt_t" value="#fff5f2"/></div></div></div>
+<div class="r2"><div class="f"><label>Heading Font</label><select id="c_hfont"><option value="'Poppins', sans-serif">Poppins</option><option value="'Inter', sans-serif">Inter</option><option value="'Playfair Display', serif">Playfair Display</option><option value="'Montserrat', sans-serif">Montserrat</option></select></div>
+<div class="f"><label>Body Font</label><select id="c_bfont"><option value="'Inter', sans-serif">Inter</option><option value="'Poppins', sans-serif">Poppins</option><option value="'Open Sans', sans-serif">Open Sans</option><option value="'Lato', sans-serif">Lato</option></select></div></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>SEO</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="f"><label>Meta Description</label><textarea id="seo_desc" rows="3" placeholder="What search engines show..."></textarea></div>
+<div class="f"><label>Keywords</label><input id="seo_kw" placeholder="restaurant in Indiranagar, best restaurant Bangalore..."/></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Hero Section</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="f"><label>Style</label><select id="h_style"><option value="">Default (left)</option><option value="centered">Centered</option><option value="full">Full image</option></select></div>
+<div class="f"><label>Heading (HTML ok, use &lt;span class="accent"&gt;text&lt;/span&gt;)</label><textarea id="h_heading" rows="2"></textarea></div>
+<div class="f"><label>Subheading</label><textarea id="h_sub" rows="3"></textarea></div>
+<div class="f"><label>Quick Highlights (one per line)</label><textarea id="h_quick" rows="4"></textarea></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>About Section</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r2"><div class="f"><label>Title</label><input id="a_title"/></div><div class="f"><label>Years of Trust</label><input id="a_since" type="number"/></div></div>
+<div class="f"><label>Image Path</label><input id="a_image" placeholder="assets/about.jpg"/></div>
+<div class="f"><label>Image Position</label><select id="a_pos"><option value="">Left</option><option value="right">Right</option></select></div>
+<div class="f"><label>Paragraphs (blank line between)</label><textarea id="a_para" rows="5"></textarea></div>
+<div class="r2"><div class="f"><label>Mission</label><textarea id="a_mission" rows="3"></textarea></div><div class="f"><label>Vision</label><textarea id="a_vision" rows="3"></textarea></div></div>
+<div class="f"><label>Footer Blurb</label><input id="a_footer"/></div>
+<div class="f"><label>Stats (value|label, one per line)</label><textarea id="a_stats" rows="4"></textarea></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Services / Menu</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r2"><div class="f"><label>Style</label><select id="s_style"><option value="cards">Cards</option><option value="menu">Menu</option><option value="pricing">Pricing</option></select></div>
+<div class="f"><label>Section Title</label><input id="s_title"/></div></div>
+<div class="r2"><div class="f"><label>Eyebrow</label><input id="s_eyebrow"/></div><div class="f"><label>Subtitle</label><input id="s_subtitle"/></div></div>
+<div id="svc-items"></div>
+<button class="badd" onclick="addSvc()">+ Add Service Item</button></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Gallery</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="f"><label>Style</label><select id="g_style"><option value="grid">Grid</option><option value="masonry">Masonry</option><option value="scroll">Horizontal Scroll</option></select></div>
+<div class="f"><label>Image Paths (one per line)</label><textarea id="g_imgs" rows="6" placeholder="assets/gallery-1.jpg&#10;assets/gallery-2.jpg"></textarea></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Testimonials</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div id="testi-items"></div>
+<button class="badd" onclick="addTesti()">+ Add Testimonial</button></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>FAQ</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div id="faq-items"></div>
+<button class="badd" onclick="addFaq()">+ Add FAQ</button></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Team</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div id="team-items"></div>
+<button class="badd" onclick="addTeam()">+ Add Team Member</button></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Contact</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r2"><div class="f"><label>Phone</label><input id="ct_phone"/></div><div class="f"><label>WhatsApp</label><input id="ct_wa"/></div></div>
+<div class="f"><label>Email</label><input id="ct_email"/></div>
+<div class="f"><label>Address (full)</label><input id="ct_addr"/></div>
+<div class="r2"><div class="f"><label>Area</label><input id="ct_area"/></div><div class="f"><label>City</label><input id="ct_city"/></div></div>
+<div class="r2"><div class="f"><label>Pincode</label><input id="ct_pin"/></div><div class="f"><label>Map Embed URL</label><input id="ct_map" placeholder="https://www.google.com/maps?q=...&output=embed"/></div></div>
+<div class="f"><label>Form Endpoint (Web3Forms/Formspree URL, optional)</label><input id="ct_form" placeholder="https://api.web3forms.com/submit?access_key=..."/></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Opening Hours</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div id="hours-items"></div>
+<button class="badd" onclick="addHours()">+ Add Hours</button></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Social Links</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="r2"><div class="f"><label>Facebook</label><input id="so_fb" placeholder="#"/></div><div class="f"><label>Instagram</label><input id="so_ig" placeholder="#"/></div></div>
+<div class="r2"><div class="f"><label>Twitter</label><input id="so_tw" placeholder="#"/></div><div class="f"><label>YouTube</label><input id="so_yt" placeholder="#"/></div></div></div></div>
+
+<div class="sec"><div class="sec-head" onclick="tog(this)"><h2>Dark Mode</h2><span class="ch">&#9660;</span></div>
+<div class="sec-body">
+<div class="f"><label><input type="checkbox" id="dark_mode"/> Enable dark mode (e.g. gym)</label></div></div></div>
+
+</div>
+
+<div class="acts">
+<button class="btn bs" onclick="resetForm()">Reset</button>
+<button class="btn bp" onclick="previewSite()">Preview</button>
+<button class="btn bgrn" onclick="downloadConfig()">Download config.js</button>
+</div>
+
+<div class="toast" id="toast"></div>
+<iframe id="prev" style="width:100%;height:80vh;border:2px solid var(--border);border-radius:var(--radius);display:none;margin:24px auto;max-width:900px"></iframe>
+
+<script>
+// Presets
+var PRESETS={};
+function loadPreset(name){
+  fetch(name+'/config.js').then(function(r){return r.text()}).then(function(txt){
+    eval(txt);var c=window.SITE_CONFIG;
+    if(!c)return;
+    gv('b_name',c.business.name);gv('b_tagline',c.business.tagline);gv('b_industry',c.business.industry);gv('b_est',c.business.established);
+    if(c.theme){gc('c_primary',c.theme.primary);gc('c_primaryDark',c.theme.primaryDark);gc('c_primaryLight',c.theme.primaryLight);gc('c_secondary',c.theme.secondary);gc('c_accent',c.theme.accent);gc('c_surfaceAlt',c.theme.surfaceAlt);
+    sv('c_hfont',c.theme.headingFont);sv('c_bfont',c.theme.bodyFont)}
+    if(c.seo){gv('seo_desc',c.seo.description);gv('seo_kw',c.seo.keywords)}
+    if(c.hero){sv('h_style',c.hero.style||'');gv('h_heading',c.hero.heading);gv('h_sub',c.hero.subheading);gv('h_quick',(c.hero.quick||[]).join('\n'))}
+    if(c.about){gv('a_title',c.about.title);gv('a_since',c.about.since);gv('a_image',c.about.image);sv('a_pos',c.about.imagePosition||'');gv('a_para',(c.about.paragraphs||[]).join('\n\n'));gv('a_mission',c.about.mission);gv('a_vision',c.about.vision);gv('a_footer',c.about.footerBlurb);gv('a_stats',(c.about.stats||[]).map(function(s){return s.value+'|'+s.label}).join('\n'))}
+    if(c.services){sv('s_style',c.services.style);gv('s_title',c.services.title);gv('s_eyebrow',c.services.eyebrow);gv('s_subtitle',c.services.subtitle);
+    var si=document.getElementById('svc-items');si.innerHTML='';(c.services.items||[]).forEach(function(it){addSvc(it)})}
+    if(c.gallery){var g=Array.isArray(c.gallery)?c.gallery:(c.gallery.images||[]);sv('g_style',(!Array.isArray(c.gallery)&&c.gallery.style)||c.galleryStyle||'grid');gv('g_imgs',g.join('\n'))}
+    document.getElementById('testi-items').innerHTML='';if(c.testimonials)c.testimonials.forEach(function(t){addTesti(t)});
+    document.getElementById('faq-items').innerHTML='';if(c.faq)c.faq.forEach(function(f){addFaq(f)});
+    document.getElementById('team-items').innerHTML='';if(c.team)c.team.forEach(function(m){addTeam(m)});
+    if(c.contact){gv('ct_phone',c.contact.phone);gv('ct_wa',c.contact.whatsapp);gv('ct_email',c.contact.email);
+    if(c.contact.address){gv('ct_addr',c.contact.address.full);gv('ct_area',c.contact.address.area);gv('ct_city',c.contact.address.city);gv('ct_pin',c.contact.address.pincode)}
+    gv('ct_map',c.contact.mapEmbed);gv('ct_form',c.contact.formEndpoint||'')}
+    document.getElementById('hours-items').innerHTML='';if(c.hours)c.hours.forEach(function(h){addHours(h)});
+    if(c.social){gv('so_fb',c.social.facebook);gv('so_ig',c.social.instagram);gv('so_tw',c.social.twitter);gv('so_yt',c.social.youtube)}
+    if(c.darkMode)document.getElementById('dark_mode').checked=true;
+    document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on')});
+    event.target.classList.add('on');
+    toast('Loaded '+name+' preset');
+  }).catch(function(){toast('Failed to load preset')});
+}
+function gv(id,v){var e=document.getElementById(id);if(e&&v!=null)e.value=v}
+function gc(id,v){var e=document.getElementById(id);var t=document.getElementById(id+'_t');if(e&&v){e.value=v;if(t)t.value=v}}
+function sv(id,v){var e=document.getElementById(id);if(e&&v!=null)e.value=v}
+function tog(el){el.closest('.sec').classList.toggle('open')}
+
+// Color sync
+document.querySelectorAll('input[type="color"]').forEach(function(p){
+  p.addEventListener('input',function(){var t=document.getElementById(this.id+'_t');if(t)t.value=this.value});
+});
+document.querySelectorAll('.cf input[type="text"]').forEach(function(t){
+  t.addEventListener('input',function(){var p=document.getElementById(this.id.replace('_t',''));if(p&&/^#[0-9a-f]{6}$/i.test(this.value))p.value=this.value});
+});
+
+// Repeaters
+var svcC=0;
+function addSvc(d){
+  d=d||{};var i=svcC++;
+  var h='<div class="rep" id="svc-'+i+'"><div class="rep-h"><h4>Service '+(i+1)+'</h4><button class="brm" onclick="this.closest(\'.rep\').remove()">Remove</button></div>';
+  h+='<div class="r2"><div class="f"><label>Title</label><input class="svct" value="'+esc(d.title||'')+'"/></div><div class="f"><label>Tag</label><input class="svctag" value="'+esc(d.tag||'')+'"/></div></div>';
+  h+='<div class="f"><label>Price</label><input class="svcprice" value="'+esc(d.price||'')+'"/></div>';
+  h+='<div class="f"><label>Description</label><textarea class="svcdesc" rows="2">'+esc(d.description||'')+'</textarea></div>';
+  h+='<div class="f"><label>Image Path</label><input class="svcimg" value="'+esc(d.image||'')+'"/></div></div>';
+  document.getElementById('svc-items').insertAdjacentHTML('beforeend',h);
+}
+function getServices(){
+  var items=[];document.querySelectorAll('#svc-items .rep').forEach(function(r){
+    var t=r.querySelector('.svct').value;if(!t)return;
+    items.push({title:t,tag:r.querySelector('.svctag').value,price:r.querySelector('.svcprice').value,description:r.querySelector('.svcdesc').value,image:r.querySelector('.svcimg').value});
+  });return items;
+}
+
+var testC=0;
+function addTesti(d){
+  d=d||{};var i=testC++;
+  var h='<div class="rep" id="test-'+i+'"><div class="rep-h"><h4>Testimonial '+(i+1)+'</h4><button class="brm" onclick="this.closest(\'.rep\').remove()">Remove</button></div>';
+  h+='<div class="r2"><div class="f"><label>Name</label><input class="tn" value="'+esc(d.name||'')+'"/></div><div class="f"><label>Role</label><input class="tr" value="'+esc(d.role||'')+'"/></div></div>';
+  h+='<div class="f"><label>Rating (1-5)</label><input type="number" class="t rating" min="1" max="5" value="'+(d.rating||5)+'"/></div>';
+  h+='<div class="f"><label>Review Text</label><textarea class="tt" rows="3">'+esc(d.text||'')+'</textarea></div></div>';
+  document.getElementById('testi-items').insertAdjacentHTML('beforeend',h);
+}
+function getTestimonials(){
+  var items=[];document.querySelectorAll('#testi-items .rep').forEach(function(r){
+    var n=r.querySelector('.tn').value;if(!n)return;
+    items.push({name:n,role:r.querySelector('.tr').value,rating:parseInt(r.querySelector('.t.rating').value)||5,text:r.querySelector('.tt').value,avatar:""});
+  });return items;
+}
+
+var faqC=0;
+function addFaq(d){
+  d=d||{};var i=faqC++;
+  var h='<div class="rep" id="faq-'+i+'"><div class="rep-h"><h4>FAQ '+(i+1)+'</h4><button class="brm" onclick="this.closest(\'.rep\').remove()">Remove</button></div>';
+  h+='<div class="f"><label>Question</label><input class="fq" value="'+esc(d.q||'')+'"/></div>';
+  h+='<div class="f"><label>Answer</label><textarea class="fa" rows="3">'+esc(d.a||'')+'</textarea></div></div>';
+  document.getElementById('faq-items').insertAdjacentHTML('beforeend',h);
+}
+function getFaq(){
+  var items=[];document.querySelectorAll('#faq-items .rep').forEach(function(r){
+    var q=r.querySelector('.fq').value;if(!q)return;
+    items.push({q:q,a:r.querySelector('.fa').value});
+  });return items;
+}
+
+var teamC=0;
+function addTeam(d){
+  d=d||{};var i=teamC++;
+  var h='<div class="rep" id="team-'+i+'"><div class="rep-h"><h4>Team '+(i+1)+'</h4><button class="brm" onclick="this.closest(\'.rep\').remove()">Remove</button></div>';
+  h+='<div class="r2"><div class="f"><label>Name</label><input class="tmn" value="'+esc(d.name||'')+'"/></div><div class="f"><label>Role</label><input class="tmr" value="'+esc(d.role||'')+'"/></div></div>';
+  h+='<div class="f"><label>Specialty</label><input class="tms" value="'+esc(d.specialty||'')+'"/></div>';
+  h+='<div class="f"><label>Description</label><textarea class="tmd" rows="2">'+esc(d.description||'')+'</textarea></div>';
+  h+='<div class="f"><label>Photo Path (optional)</label><input class="tmp" value="'+esc(d.photo||'')+'"/></div></div>';
+  document.getElementById('team-items').insertAdjacentHTML('beforeend',h);
+}
+function getTeam(){
+  var items=[];document.querySelectorAll('#team-items .rep').forEach(function(r){
+    var n=r.querySelector('.tmn').value;if(!n)return;
+    items.push({name:n,role:r.querySelector('.tmr').value,specialty:r.querySelector('.tms').value,description:r.querySelector('.tmd').value,photo:r.querySelector('.tmp').value});
+  });return items;
+}
+
+var hrC=0;
+function addHours(d){
+  d=d||{};var i=hrC++;
+  var h='<div class="rep" id="hr-'+i+'"><div class="rep-h"><h4>Hours '+(i+1)+'</h4><button class="brm" onclick="this.closest(\'.rep\').remove()">Remove</button></div>';
+  h+='<div class="r2"><div class="f"><label>Day</label><input class="hd" value="'+esc(d.day||'')+'"/></div><div class="f"><label>Time</label><input class="ht_" value="'+esc(d.time||'')+'"/></div></div></div>';
+  document.getElementById('hours-items').insertAdjacentHTML('beforeend',h);
+}
+function getHours(){
+  var items=[];document.querySelectorAll('#hours-items .rep').forEach(function(r){
+    var d=r.querySelector('.hd').value;if(!d)return;
+    items.push({day:d,time:r.querySelector('.ht_').value});
+  });return items;
+}
+
+function esc(s){return String(s||'').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+
+function gv_(id){return(document.getElementById(id)||{}).value||''}
+function lines(v){return v.split('\n').map(function(l){return l.trim()}).filter(Boolean)}
+
+function buildConfig(){
+  var c={};
+  c.business={name:gv_('b_name'),tagline:gv_('b_tagline'),industry:gv_('b_industry'),established:gv_('b_est')};
+  c.theme={primary:gv_('c_primary'),primaryDark:gv_('c_primaryDark'),primaryLight:gv_('c_primaryLight'),secondary:gv_('c_secondary'),accent:gv_('c_accent'),surfaceAlt:gv_('c_surfaceAlt'),headingFont:gv_('c_hfont'),bodyFont:gv_('c_bfont')};
+  c.seo={description:gv_('seo_desc'),keywords:gv_('seo_kw'),ogImage:"assets/hero.jpg"};
+  c.hero={style:gv_('h_style')||undefined,heading:gv_('h_heading'),subheading:gv_('h_sub'),images:["assets/hero.jpg"],quick:lines(gv_('h_quick'))};
+  if(!c.hero.style)delete c.hero.style;
+  c.about={title:gv_('a_title'),image:gv_('a_image'),since:gv_('a_since'),imagePosition:gv_('a_pos')||undefined,paragraphs:lines(gv_('a_para')),mission:gv_('a_mission'),vision:gv_('a_vision'),footerBlurb:gv_('a_footer'),stats:lines(gv_('a_stats')).map(function(l){var p=l.split('|');return{value:p[0],label:p[1]}})};
+  if(!c.about.imagePosition)delete c.about.imagePosition;
+  c.services={style:gv_('s_style'),eyebrow:gv_('s_eyebrow'),title:gv_('s_title'),subtitle:gv_('s_subtitle'),items:getServices()};
+  var gImgs=lines(gv_('g_imgs'));
+  c.gallery={style:gv_('g_style'),images:gImgs};
+  c.testimonials=getTestimonials();
+  c.faq=getFaq();
+  var tm=getTeam();if(tm.length)c.team=tm;
+  c.ctaBand={title:"Ready to Experience "+c.business.name+"?",subtitle:"Get in touch today and let us take care of the rest."};
+  c.contact={phone:gv_('ct_phone'),whatsapp:gv_('ct_wa'),email:gv_('ct_email'),address:{full:gv_('ct_addr'),area:gv_('ct_area'),city:gv_('ct_city'),pincode:gv_('ct_pin')},mapEmbed:gv_('ct_map')};
+  var fe=gv_('ct_form');if(fe)c.contact.formEndpoint=fe;
+  c.hours=getHours();
+  c.social={facebook:gv_('so_fb'),instagram:gv_('so_ig'),twitter:gv_('so_tw'),youtube:gv_('so_yt')};
+  if(document.getElementById('dark_mode').checked)c.darkMode=true;
+  return c;
+}
+
+function toJS(val,indent){
+  indent=indent||'  ';
+  if(typeof val==='string')return JSON.stringify(val);
+  if(typeof val==='number'||typeof val==='boolean')return String(val);
+  if(val===null||val===undefined)return 'null';
+  if(Array.isArray(val)){
+    if(val.length===0)return '[]';
+    var items=val.map(function(v){return indent+toJS(v,indent+'  ')});
+    return '[\n'+items.join(',\n')+'\n'+indent.slice(2)+']';
+  }
+  if(typeof val==='object'){
+    var keys=Object.keys(val);
+    if(keys.length===0)return '{}';
+    var lines=keys.map(function(k){
+      var v=val[k];if(v===undefined)return '';
+      var key=/^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(k)?k:JSON.stringify(k);
+      return indent+key+': '+toJS(v,indent+'  ');
+    }).filter(Boolean);
+    return '{\n'+lines.join(',\n')+'\n'+indent.slice(2)+'}';
+  }
+  return String(val);
+}
+
+function generateJS(){
+  var c=buildConfig();
+  var out='window.SITE_CONFIG = '+toJS(c, '  ')+';\n';
+  return out;
+}
+
+function downloadConfig(){
+  var js=generateJS();
+  var blob=new Blob([js],{type:'application/javascript'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='config.js';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('config.js downloaded!');
+}
+
+function previewSite(){
+  var js=generateJS();
+  var f=document.getElementById('prev');
+  f.style.display='block';
+  f.scrollIntoView({behavior:'smooth'});
+  var doc=f.contentDocument||f.contentWindow.document;
+  doc.open();
+  doc.write('<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../_framework/css/base.css"/><link rel="stylesheet" href="../_framework/css/layout.css"/><link rel="stylesheet" href="../_framework/css/components.css"/><link rel="stylesheet" href="../_framework/css/theme.css"/></head><body><div id="app"></div><script>'+js+'<\/script><script src="../_framework/js/app.js"><\/script></body></html>');
+  doc.close();
+  toast('Preview loaded');
+}
+
+function resetForm(){
+  if(!confirm('Reset all fields?'))return;
+  document.querySelectorAll('input:not([type="color"]):not([type="checkbox"]):not([type="number"]),textarea,select').forEach(function(e){e.value=''});
+  document.querySelectorAll('.rep').forEach(function(e){e.remove()});
+  document.getElementById('dark_mode').checked=false;
+  toast('Form reset');
+}
+
+function toast(msg){
+  var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show')},2500);
+}
+
+// Init presets
+(function(){
+  var names=['restaurant','gym','hospital','salon','school','boutique','grocery','caterer','coaching'];
+  var el=document.getElementById('presets');
+  names.forEach(function(n){
+    var chip=document.createElement('div');chip.className='chip';chip.textContent=n.charAt(0).toUpperCase()+n.slice(1);
+    chip.onclick=function(){loadPreset(n)};
+    el.appendChild(chip);
+  });
+})();
+</script>
+</body>
+</html>
