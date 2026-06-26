@@ -472,28 +472,12 @@ p { color: var(--color-text-muted); }
 .hero--full .hero__quick { gap: 18px; }
 .hero--full .hero__quick-item { font-size: 0.9rem; }
 
-.hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 18px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  backdrop-filter: blur(6px);
-  margin-bottom: 24px;
-}
-
 .hero h1 {
   color: #fff;
   margin-bottom: 20px;
+  word-break: keep-all;
 }
-.hero h1 .accent { color: var(--color-accent); }
+.hero h1 .accent { color: var(--color-accent); white-space: nowrap; }
 
 .hero__lead {
   font-size: 1.2rem;

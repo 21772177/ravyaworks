@@ -322,7 +322,6 @@
         class: "btn btn--ghost-light btn--lg"
       }, cfg.cta.secondary));
     }
-    inner.querySelector(".hero__inner").appendChild(el("div", { class: "hero__eyebrow" }, (cfg.business.industry || "") + " • Bangalore"));
     inner.querySelector(".hero__inner").appendChild(el("h1", { html: h.heading }));
     inner.querySelector(".hero__inner").appendChild(el("p", { class: "hero__lead" }, h.subheading));
     inner.querySelector(".hero__inner").appendChild(actions);

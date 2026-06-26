@@ -39,6 +39,7 @@
   font-size: 1.35rem;
   color: var(--color-secondary);
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .brand__mark {
@@ -249,6 +250,8 @@
 }
 @media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; }
+  .brand { font-size: 1.1rem; gap: 8px; }
+  .brand__mark { width: 34px; height: 34px; font-size: 1rem; }
 }
 
 /* Skip link for accessibility */
