@@ -32,7 +32,6 @@ window.SITE_CONFIG = {
   },
 
   hero: {
-    style: "centered",
     heading: "Where Beauty Meets <span class='accent'>Elegance</span>",
     subheading: "Indiranagar's most loved unisex salon — where expert stylists, premium products and a relaxing ambience come together to make you look and feel absolutely stunning.",
     images: ["assets/hero.jpg"],

@@ -32,7 +32,6 @@ window.SITE_CONFIG = {
   },
 
   hero: {
-    style: "centered",
     heading: "Crack Every Exam with <span class='accent'>Success Point</span>",
     subheading: "Bangalore's trusted coaching institute for JEE, NEET, CET and Foundation — where disciplined mentoring, proven study material and 14 years of results turn ambition into achievement.",
     images: ["assets/hero.jpg"],

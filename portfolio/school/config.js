@@ -32,7 +32,6 @@ window.SITE_CONFIG = {
   },
 
   hero: {
-    style: "centered",
     heading: "Shaping Young Minds at <span class='accent'>Bright Future Academy</span>",
     subheading: "A CBSE-affiliated school where curiosity meets care — nurturing confident, compassionate and future-ready learners from Kindergarten to Grade 12 in the heart of Jayanagar.",
     images: ["assets/hero.jpg"],

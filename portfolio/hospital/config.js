@@ -32,7 +32,6 @@ window.SITE_CONFIG = {
   },
 
   hero: {
-    style: "full",
     heading: "Compassionate Care, <span class='accent'>Advanced Medicine</span>",
     subheading: "A NABH-accredited multi-speciality hospital in Indiranagar — bringing world-class doctors, advanced technology and genuine human care together under one roof, 24 hours a day.",
     images: ["assets/hero.jpg"],

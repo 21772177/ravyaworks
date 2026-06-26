@@ -32,7 +32,6 @@ window.SITE_CONFIG = {
   },
 
   hero: {
-    style: "full",
     heading: "Timeless Ethnic Wear, <span class='accent'>Crafted for You</span>",
     subheading: "Jayanagar's destination for handpicked designer sarees, lehengas and bridal couture — where every piece is a celebration of Indian craftsmanship, tradition and your unique elegance.",
     images: ["assets/hero.jpg"],
