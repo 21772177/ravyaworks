@@ -94,58 +94,15 @@
   inset: 0;
   z-index: -1;
   background: linear-gradient(115deg,
-    rgba(0,0,0,0.82) 0%,
-    rgba(0,0,0,0.55) 45%,
-    rgba(0,0,0,0.25) 100%);
+    rgba(0,0,0,0.88) 0%,
+    rgba(0,0,0,0.60) 40%,
+    rgba(0,0,0,0.15) 100%);
 }
 
 .hero__inner {
   max-width: 720px;
   padding-block: 60px;
-}
-
-/* -- Hero variant: centered text (school, coaching, salon, caterer) -- */
-.hero--centered {
-  justify-content: center;
-  text-align: center;
-}
-.hero--centered .hero__inner {
-  max-width: 850px;
-  margin-inline: auto;
-}
-.hero--centered .hero__lead {
-  max-width: 650px;
-  margin-inline: auto;
-  margin-bottom: 32px;
-}
-.hero--centered .hero__actions {
-  justify-content: center;
-}
-.hero--centered .hero__quick {
-  justify-content: center;
-}
-.hero--centered .hero__overlay {
-  background: linear-gradient(180deg,
-    rgba(0,0,0,0.7) 0%,
-    rgba(0,0,0,0.45) 40%,
-    rgba(0,0,0,0.25) 100%);
-}
-
-/* -- Hero variant: full image (boutique, hospital) -- */
-.hero--full {
-  min-height: 85vh;
-}
-.hero--full .hero__overlay {
-  background: linear-gradient(180deg,
-    rgba(0,0,0,0.15) 0%,
-    rgba(0,0,0,0.1) 50%,
-    rgba(0,0,0,0.75) 100%);
-}
-.hero--full .hero__inner {
-  margin-top: auto;
-  max-width: 800px;
-  padding-bottom: 80px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  width: 100%;
 }
 
 .hero__eyebrow {
@@ -173,9 +130,10 @@
 
 .hero__lead {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.95);
   margin-bottom: 32px;
   max-width: 580px;
+  line-height: 1.6;
 }
 
 .hero__actions {
@@ -195,9 +153,69 @@
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.95);
 }
 .hero__quick-item svg { color: var(--color-accent); }
+
+/* -- Hero variant: centered text (school, coaching, salon, caterer) -- */
+.hero--centered {
+  justify-content: center;
+  text-align: center;
+}
+.hero--centered .hero__inner {
+  max-width: 850px;
+  margin-inline: auto;
+}
+.hero--centered .hero__lead {
+  max-width: 650px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+}
+.hero--centered .hero__actions {
+  justify-content: center;
+}
+.hero--centered .hero__quick {
+  justify-content: center;
+}
+.hero--centered .hero__overlay {
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.50) 40%,
+    rgba(0,0,0,0.30) 100%);
+}
+
+/* -- Hero variant: full image (boutique, hospital) -- */
+.hero--full {
+  min-height: 85vh;
+}
+.hero--full .hero__overlay {
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.20) 40%,
+    rgba(0,0,0,0.85) 100%);
+}
+.hero--full .hero__inner {
+  margin-top: auto;
+  max-width: 800px;
+  padding-bottom: 100px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+.hero--full h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin-bottom: 16px;
+}
+.hero--full .hero__lead {
+  margin-bottom: 24px;
+}
+.hero--full .hero__actions {
+  margin-bottom: 28px;
+}
+.hero--full .hero__quick {
+  gap: 18px;
+}
+.hero--full .hero__quick-item {
+  font-size: 0.9rem;
+}
 
 .scroll-cue {
   position: absolute;
@@ -1156,12 +1174,18 @@ body.dark-mode .main-nav { background: #1a1d26; }
 
 /* ---------- Mobile fixes (320px+) ---------- */
 @media (max-width: 480px) {
-  .hero__inner { padding-block: 40px; }
-  .hero__lead { font-size: 1.05rem; }
-  .hero__actions { flex-direction: column; }
+  .hero { min-height: 92vh; min-height: 92svh; }
+  .hero__inner { padding-block: 30px; }
+  .hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+  .hero__lead { font-size: 1rem; margin-bottom: 24px; }
+  .hero__actions { flex-direction: column; gap: 12px; margin-bottom: 24px; }
   .hero__actions .btn { width: 100%; text-align: center; }
-  .hero__quick { flex-direction: column; gap: 14px; }
-  .hero__quick-item { font-size: 0.88rem; }
+  .hero__quick { flex-direction: column; gap: 10px; }
+  .hero__quick-item { font-size: 0.85rem; }
+  .hero--full { min-height: 80vh; }
+  .hero--full .hero__inner { padding-bottom: 60px; }
+  .hero--full .hero__quick { gap: 10px; }
+  .scroll-cue { bottom: 12px; font-size: 0.7rem; }
   .stats { grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px; margin-top: -30px; }
   .stat__num { font-size: 1.5rem; }
   .about-grid { gap: 28px; }
