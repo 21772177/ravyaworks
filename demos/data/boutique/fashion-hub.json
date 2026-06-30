@@ -1,0 +1,29 @@
+{
+  "businessName": "Fashion Hub",
+  "industry": "Fashion Boutique",
+  "slug": "fashion-hub",
+  "tagline": "Dress Your Story",
+  "description": "Fashion Hub is a curated fashion boutique in Bangalore featuring the latest trends in ethnic wear, western wear, and fusion styles. We handpick every piece to help you express your unique style, whether it's a wedding, a party, or your everyday look.",
+  "heroImage": "",
+  "theme": "boutique",
+  "phone": "+91 84729 71206",
+  "email": "shop@fashionhub.in",
+  "address": "35, Commercial Street, Bengaluru, Karnataka 560001",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560001",
+  "googleMaps": "https://www.google.com/maps?q=Commercial+Street,Bengaluru&output=embed",
+  "googleRating": "4.3",
+  "reviewCount": "650+",
+  "businessHours": {
+    "Monday – Saturday": "10:00 AM – 9:00 PM",
+    "Sunday": "11:00 AM – 7:00 PM"
+  },
+  "serviceOptions": ["Ethnic Wear", "Western Wear", "Fusion Collection", "Custom Tailoring"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

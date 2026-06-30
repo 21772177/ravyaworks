@@ -1,0 +1,30 @@
+{
+  "businessName": "Bright Future Academy",
+  "industry": "School / CBSE Affiliated",
+  "slug": "bright-future-academy",
+  "tagline": "Shaping Tomorrow's Leaders Today",
+  "description": "Bright Future Academy is a premier CBSE-affiliated school in Bangalore offering holistic education from Kindergarten to Grade 12. With a focus on academic excellence, sports, and character development, we nurture every child to reach their full potential.",
+  "heroImage": "",
+  "theme": "school",
+  "phone": "+91 84729 71201",
+  "email": "info@brightfutureacademy.edu.in",
+  "address": "No. 18, 11th Main Road, Jayanagar, Bengaluru, Karnataka 560011",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560011",
+  "googleMaps": "https://www.google.com/maps?q=Jayanagar,Bengaluru&output=embed",
+  "googleRating": "4.7",
+  "reviewCount": "1800+",
+  "businessHours": {
+    "Monday – Friday": "8:00 AM – 3:30 PM",
+    "Saturday": "8:00 AM – 12:30 PM",
+    "Sunday": "Closed"
+  },
+  "serviceOptions": ["Kindergarten to Grade 12", "CBSE Curriculum", "Sports Academy", "Smart Classrooms"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

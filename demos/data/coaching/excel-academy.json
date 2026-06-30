@@ -1,0 +1,29 @@
+{
+  "businessName": "Excel Academy",
+  "industry": "Coaching & Tuition",
+  "slug": "excel-academy",
+  "tagline": "Unlock Your Academic Potential",
+  "description": "Excel Academy is a premier coaching institute in Bangalore offering JEE, NEET, CET, and foundation courses for Grades 8–12. With experienced faculty, comprehensive study material, and personalised mentoring, we have helped 500+ students crack competitive exams.",
+  "heroImage": "",
+  "theme": "coaching",
+  "phone": "+91 84729 71209",
+  "email": "enroll@excelacademy.in",
+  "address": "45, BTM Layout 2nd Stage, Bengaluru, Karnataka 560076",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560076",
+  "googleMaps": "https://www.google.com/maps?q=BTM+Layout,Bengaluru&output=embed",
+  "googleRating": "4.6",
+  "reviewCount": "1400+",
+  "businessHours": {
+    "Monday – Saturday": "6:00 AM – 9:00 PM",
+    "Sunday": "8:00 AM – 2:00 PM"
+  },
+  "serviceOptions": ["JEE Preparation", "NEET Coaching", "CET Training", "Foundation Courses"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

@@ -1,0 +1,29 @@
+{
+  "businessName": "Royal Taste Caterers",
+  "industry": "Catering & Events",
+  "slug": "royal-taste-caterers",
+  "tagline": "Making Every Occasion Memorable",
+  "description": "Royal Taste Caterers is a full-service catering company in Bangalore specialising in weddings, corporate events, and private parties. Our expert chefs craft menus that blend traditional flavours with modern presentation, using the finest ingredients.",
+  "heroImage": "",
+  "theme": "caterer",
+  "phone": "+91 84729 71207",
+  "email": "info@royaltastecaterers.com",
+  "address": "88, Cunningham Road, Bengaluru, Karnataka 560052",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560052",
+  "googleMaps": "https://www.google.com/maps?q=Cunningham+Road,Bengaluru&output=embed",
+  "googleRating": "4.6",
+  "reviewCount": "850+",
+  "businessHours": {
+    "Monday – Saturday": "9:00 AM – 8:00 PM",
+    "Sunday": "10:00 AM – 6:00 PM"
+  },
+  "serviceOptions": ["Wedding Catering", "Corporate Events", "Private Parties", "Live Food Stations"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

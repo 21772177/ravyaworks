@@ -1,0 +1,212 @@
+{
+  "businessName": "CarePlus Hospital",
+  "industry": "Multi-Speciality Hospital",
+  "slug": "careplus",
+  "tagline": "Advanced Care, Compassionate Hearts",
+  "description": "CarePlus Hospital is a state-of-the-art multi-speciality healthcare facility in Bangalore with 200+ beds, advanced diagnostic technology, and a team of 50+ highly qualified doctors. We offer comprehensive medical services across cardiology, orthopaedics, neurology, paediatrics, gynaecology, emergency care, and more. At CarePlus, every patient receives personalised treatment in a warm, healing environment.",
+  "logo": "",
+  "heroImage": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600",
+  "theme": "hospital",
+  "phone": "+91 84729 71203",
+  "email": "contact@careplushospital.com",
+  "website": "https://careplushospital.com",
+  "address": "No. 88, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560038",
+  "googleMaps": "https://www.google.com/maps?q=Indiranagar,Bengaluru&output=embed",
+  "latitude": "12.9783",
+  "longitude": "77.6408",
+  "googleRating": "4.6",
+  "reviewCount": "3200+",
+  "businessHours": {
+    "Monday": "Open 24 Hours",
+    "Tuesday": "Open 24 Hours",
+    "Wednesday": "Open 24 Hours",
+    "Thursday": "Open 24 Hours",
+    "Friday": "Open 24 Hours",
+    "Saturday": "Open 24 Hours",
+    "Sunday": "Open 24 Hours"
+  },
+  "serviceOptions": [
+    "24/7 Emergency",
+    "OPD Consultation",
+    "Pharmacy",
+    "Diagnostic Lab"
+  ],
+  "bookingLinks": {
+    "website": "https://careplushospital.com/appointments",
+    "zomato": "",
+    "swiggy": "",
+    "district": ""
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com/careplushospital",
+    "instagram": "https://instagram.com/careplushospital",
+    "linkedin": "https://linkedin.com/company/careplushospital",
+    "youtube": ""
+  },
+  "services": [
+    {
+      "title": "Cardiology",
+      "price": "",
+      "description": "Comprehensive heart care including angioplasty, bypass surgery, and preventive cardiology with state-of-the-art cath lab.",
+      "image": "",
+      "tag": "",
+      "features": ["Cath Lab", "24/7 Cardiac ICU", "Stress Test", "Echocardiography"],
+      "cta": "Book Appointment",
+      "featured": true
+    },
+    {
+      "title": "Orthopaedics",
+      "price": "",
+      "description": "Expert care for bone, joint, and spine conditions including knee replacements, sports injuries, and trauma surgery.",
+      "image": "",
+      "tag": "",
+      "features": ["Joint Replacement", "Spine Surgery", "Sports Medicine", "Physiotherapy"],
+      "cta": "Book Appointment",
+      "featured": false
+    },
+    {
+      "title": "Paediatrics",
+      "price": "",
+      "description": "Specialised medical care for newborns, children, and adolescents with a dedicated paediatric ICU.",
+      "image": "",
+      "tag": "",
+      "features": ["Neonatal ICU", "Child Vaccination", "Growth Monitoring", "Paediatric Surgery"],
+      "cta": "Book Appointment",
+      "featured": false
+    },
+    {
+      "title": "Gynaecology",
+      "price": "",
+      "description": "Complete women's health services from routine check-ups to high-risk pregnancy management and minimally invasive surgeries.",
+      "image": "",
+      "tag": "",
+      "features": ["Prenatal Care", "High-Risk Pregnancy", "Fibroid Treatment", "Laparoscopic Surgery"],
+      "cta": "Book Appointment",
+      "featured": false
+    },
+    {
+      "title": "Emergency Medicine",
+      "price": "",
+      "description": "24/7 emergency department with rapid response trauma team, fully equipped ambulances, and golden-hour protocols.",
+      "image": "",
+      "tag": "",
+      "features": ["24/7 Availability", "Trauma Team", "Life Support", "Ambulance Service"],
+      "cta": "Call Emergency",
+      "featured": true
+    },
+    {
+      "title": "Neurology",
+      "price": "",
+      "description": "Advanced diagnostics and treatment for neurological disorders including stroke management, epilepsy care, and neurosurgery.",
+      "image": "",
+      "tag": "",
+      "features": ["Stroke Unit", "Neuro Surgery", "EEG Lab", "Movement Disorders"],
+      "cta": "Book Appointment",
+      "featured": false
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800",
+    "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800",
+    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800",
+    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800",
+    "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800",
+    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800"
+  ],
+  "reviews": [
+    {
+      "name": "Suresh K.",
+      "role": "Patient",
+      "rating": 5,
+      "text": "Excellent hospital with very caring staff. My father's knee replacement was smooth and recovery was faster than expected.",
+      "avatar": ""
+    },
+    {
+      "name": "Meena R.",
+      "role": "Mother of Patient",
+      "rating": 5,
+      "text": "The paediatric team was wonderful with my 3-year-old. The NICU facilities gave us so much peace of mind.",
+      "avatar": ""
+    },
+    {
+      "name": "Vikram P.",
+      "role": "Emergency Patient",
+      "rating": 4,
+      "text": "Came in with chest pain at 2 AM and was seen immediately. Fast response, thorough diagnosis. Very grateful.",
+      "avatar": ""
+    }
+  ],
+  "team": [
+    {
+      "name": "Dr. Arjun Nair",
+      "role": "Chief Cardiologist",
+      "specialty": "Interventional Cardiology",
+      "description": "MD, DM (Cardiology), 18+ years experience. Trained at AIIMS and Cleveland Clinic.",
+      "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300",
+      "phone": "+91 84729 71210",
+      "email": "arjun.nair@careplushospital.com"
+    },
+    {
+      "name": "Dr. Lakshmi Iyer",
+      "role": "Senior Orthopaedic Surgeon",
+      "specialty": "Joint Replacement & Spine Surgery",
+      "description": "MS (Ortho), DNB, 15+ years experience. Specialises in minimally invasive knee and hip replacements.",
+      "photo": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300",
+      "phone": "+91 84729 71211",
+      "email": "lakshmi.iyer@careplushospital.com"
+    },
+    {
+      "name": "Dr. Rajesh Kumar",
+      "role": "Head of Emergency Medicine",
+      "specialty": "Trauma & Critical Care",
+      "description": "MD (Emergency Medicine), 12+ years experience. Former lead at Narayana Health emergency unit.",
+      "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300",
+      "phone": "+91 84729 71212",
+      "email": "rajesh.kumar@careplushospital.com"
+    },
+    {
+      "name": "Dr. Priya Menon",
+      "role": "Senior Gynaecologist",
+      "specialty": "High-Risk Pregnancy & Laparoscopic Surgery",
+      "description": "MD (OBG), MRCOG (UK), 14+ years experience. Expert in minimally invasive gynaecological procedures.",
+      "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300",
+      "phone": "+91 84729 71213",
+      "email": "priya.menon@careplushospital.com"
+    },
+    {
+      "name": "Dr. Sanjay Verma",
+      "role": "Senior Neurologist",
+      "specialty": "Stroke & Movement Disorders",
+      "description": "MD, DM (Neurology), 16+ years experience. Pioneer in stroke thrombolysis protocols in Karnataka.",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300",
+      "phone": "+91 84729 71214",
+      "email": "sanjay.verma@careplushospital.com"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is the hospital open 24/7?",
+      "a": "Yes, CarePlus is open 24 hours a day, 365 days a year. Our emergency department is always staffed and ready."
+    },
+    {
+      "q": "How do I book an appointment?",
+      "a": "You can book online through our website, call us directly, or visit the hospital's OPD reception between 8 AM and 8 PM."
+    },
+    {
+      "q": "Does insurance cover treatments at CarePlus?",
+      "a": "We are empanelled with all major insurance providers and TPA networks. Our insurance desk will assist you with cashless claims."
+    },
+    {
+      "q": "Do you offer home healthcare services?",
+      "a": "Yes, we provide nursing care, physiotherapy, and lab sample collection at home. Call our helpline for details."
+    },
+    {
+      "q": "Is there a pharmacy on campus?",
+      "a": "Our 24-hour pharmacy is located on the ground floor with most prescription and OTC medicines in stock."
+    }
+  ]
+}

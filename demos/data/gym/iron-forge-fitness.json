@@ -1,0 +1,29 @@
+{
+  "businessName": "Iron Forge Fitness",
+  "industry": "Gym & Fitness Centre",
+  "slug": "iron-forge-fitness",
+  "tagline": "Forge Your Strongest Self",
+  "description": "Iron Forge Fitness is a premium gym in Bangalore with world-class equipment, certified trainers, group classes, and a motivating community. From strength training to yoga, we have everything you need to reach your fitness goals.",
+  "heroImage": "",
+  "theme": "gym",
+  "phone": "+91 84729 71204",
+  "email": "info@ironforgefitness.com",
+  "address": "55, MG Road, Bengaluru, Karnataka 560001",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560001",
+  "googleMaps": "https://www.google.com/maps?q=MG+Road,Bengaluru&output=embed",
+  "googleRating": "4.5",
+  "reviewCount": "1200+",
+  "businessHours": {
+    "Monday – Saturday": "5:00 AM – 10:00 PM",
+    "Sunday": "6:00 AM – 8:00 PM"
+  },
+  "serviceOptions": ["Personal Training", "Group Classes", "Nutrition Counselling", "Spa & Sauna"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

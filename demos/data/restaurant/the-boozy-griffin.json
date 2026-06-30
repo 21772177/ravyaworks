@@ -1,0 +1,142 @@
+{
+  "businessName": "The Boozy Griffin",
+  "industry": "Restaurant / Gastropub",
+  "slug": "the-boozy-griffin",
+  "tagline": "Where Every Meal Feels Like a Celebration",
+  "description": "The Boozy Griffin is Bangalore's favourite gastropub, offering a carefully curated menu of global cuisine paired with handcrafted cocktails, live music, and an electric atmosphere. Whether you're here for a quiet dinner or a night out with friends, every visit is an experience.",
+  "logo": "",
+  "heroImage": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600",
+  "theme": "restaurant",
+  "phone": "+91 96115 47239",
+  "email": "hello@theboozygriffin.com",
+  "website": "https://theboozygriffin.com",
+  "address": "105, 1st A Cross Road, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560095",
+  "googleMaps": "https://www.google.com/maps?q=Koramangala,Bengaluru&output=embed",
+  "latitude": "12.9352",
+  "longitude": "77.6245",
+  "googleRating": "4.5",
+  "reviewCount": "2500+",
+  "businessHours": {
+    "Monday": "11:00 AM – 10:30 PM",
+    "Tuesday": "11:00 AM – 10:30 PM",
+    "Wednesday": "11:00 AM – 10:30 PM",
+    "Thursday": "11:00 AM – 10:30 PM",
+    "Friday": "11:00 AM – 11:30 PM",
+    "Saturday": "11:00 AM – 11:30 PM",
+    "Sunday": "10:00 AM – 10:30 PM"
+  },
+  "serviceOptions": [
+    "Reservations Required",
+    "Live Music",
+    "Karaoke Nights",
+    "Outdoor Seating"
+  ],
+  "bookingLinks": {
+    "website": "https://theboozygriffin.com/reserve",
+    "zomato": "https://zomato.com/the-boozy-griffin",
+    "swiggy": "https://swiggy.com/the-boozy-griffin",
+    "district": "https://district.in/the-boozy-griffin"
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com/theboozygriffin",
+    "instagram": "https://instagram.com/theboozygriffin",
+    "linkedin": "",
+    "youtube": ""
+  },
+  "services": [
+    {
+      "title": "Grilled Peri-Peri Chicken",
+      "price": "\u20b9459",
+      "description": "Herb-marinated chicken chargrilled to perfection, served with garlic butter sauce and seasonal vegetables.",
+      "image": "",
+      "tag": "Signature",
+      "features": [],
+      "cta": "",
+      "featured": true
+    },
+    {
+      "title": "Truffle Mushroom Risotto",
+      "price": "\u20b9399",
+      "description": "Creamy Arborio rice slow-cooked with wild mushrooms, truffle oil, and parmesan.",
+      "image": "",
+      "tag": "Veg",
+      "features": [],
+      "cta": "",
+      "featured": false
+    },
+    {
+      "title": "Classic Buffalo Wings",
+      "price": "\u20b9349",
+      "description": "Crispy fried chicken wings tossed in house buffalo sauce, served with blue cheese dip and celery sticks.",
+      "image": "",
+      "tag": "Starter",
+      "features": [],
+      "cta": "",
+      "featured": false
+    },
+    {
+      "title": "Boozy Brownie Sundae",
+      "price": "\u20b9299",
+      "description": "Warm chocolate brownie topped with whiskey caramel, vanilla ice cream, and crushed nuts.",
+      "image": "",
+      "tag": "Dessert",
+      "features": [],
+      "cta": "",
+      "featured": true
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800",
+    "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+    "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800",
+    "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800",
+    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800"
+  ],
+  "reviews": [
+    {
+      "name": "Ananya Sharma",
+      "role": "Regular Patron",
+      "rating": 5,
+      "text": "Best gastropub in Koramangala! The live music on Fridays is incredible, and the cocktails are top-notch.",
+      "avatar": ""
+    },
+    {
+      "name": "Rahul Mehta",
+      "role": "Food Blogger",
+      "rating": 4,
+      "text": "The Peri-Peri Chicken is a must-try. Great vibe, slightly slow service on busy nights but totally worth it.",
+      "avatar": ""
+    },
+    {
+      "name": "Priya Iyer",
+      "role": "Corporate Event Host",
+      "rating": 5,
+      "text": "We hosted our team dinner here and it was flawless. The staff went above and beyond.",
+      "avatar": ""
+    }
+  ],
+  "team": [],
+  "faq": [
+    {
+      "q": "Do you take table reservations?",
+      "a": "Yes! We recommend reserving in advance, especially on weekends. You can book directly through our website or Zomato."
+    },
+    {
+      "q": "Is there a dress code?",
+      "a": "Smart casual is preferred. No sportswear or beachwear, please."
+    },
+    {
+      "q": "Do you have vegan options?",
+      "a": "Absolutely. Our menu clearly marks vegan, vegetarian, and gluten-free options. Just ask your server for recommendations."
+    },
+    {
+      "q": "Is there live music every day?",
+      "a": "Live music runs Thursday through Saturday. Sunday to Wednesday we have curated playlists and occasional open-mic nights."
+    }
+  ]
+}

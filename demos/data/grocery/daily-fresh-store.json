@@ -1,0 +1,29 @@
+{
+  "businessName": "Daily Fresh Store",
+  "industry": "Grocery & Supermarket",
+  "slug": "daily-fresh-store",
+  "tagline": "Freshness You Can Trust",
+  "description": "Daily Fresh Store is your neighbourhood supermarket in Bangalore offering farm-fresh fruits & vegetables, premium groceries, dairy products, bakery items, beverages, and household essentials — all at the best prices with free home delivery.",
+  "heroImage": "",
+  "theme": "grocery",
+  "phone": "+91 84729 71208",
+  "email": "support@dailyfreshstore.com",
+  "address": "22, 80 Feet Road, Koramangala, Bengaluru, Karnataka 560034",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560034",
+  "googleMaps": "https://www.google.com/maps?q=Koramangala,Bengaluru&output=embed",
+  "googleRating": "4.2",
+  "reviewCount": "2100+",
+  "businessHours": {
+    "Monday – Saturday": "7:00 AM – 10:30 PM",
+    "Sunday": "8:00 AM – 9:00 PM"
+  },
+  "serviceOptions": ["Free Home Delivery", "Farm Fresh", "Organic Section", "Monthly Subsriptions"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}

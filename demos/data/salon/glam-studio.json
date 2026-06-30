@@ -1,0 +1,29 @@
+{
+  "businessName": "Glam Studio",
+  "industry": "Salon & Beauty Studio",
+  "slug": "glam-studio",
+  "tagline": "Where Beauty Meets Perfection",
+  "description": "Glam Studio is a premium unisex salon in Bangalore offering hair styling, skincare, bridal makeovers, nail art, and grooming services. Our experienced stylists use top international brands to deliver a luxurious salon experience.",
+  "heroImage": "",
+  "theme": "salon",
+  "phone": "+91 84729 71205",
+  "email": "hello@glamstudio.in",
+  "address": "12, Church Street, Bengaluru, Karnataka 560001",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "pincode": "560001",
+  "googleMaps": "https://www.google.com/maps?q=Church+Street,Bengaluru&output=embed",
+  "googleRating": "4.4",
+  "reviewCount": "980+",
+  "businessHours": {
+    "Monday – Saturday": "9:30 AM – 8:30 PM",
+    "Sunday": "10:00 AM – 6:00 PM"
+  },
+  "serviceOptions": ["Hair Styling", "Skincare", "Bridal Makeover", "Nail Art"],
+  "socialLinks": { "facebook": "", "instagram": "", "linkedin": "", "youtube": "" },
+  "services": [],
+  "gallery": [],
+  "reviews": [],
+  "team": [],
+  "faq": []
+}
